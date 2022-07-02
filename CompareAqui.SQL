@@ -82,7 +82,7 @@ CREATE TABLE Ofertas
 	id INT PRIMARY KEY,
     id_produto INT,
     id_empresa INT,
-    preco INT,
+    preco DOUBLE,
     FOREIGN KEY(id_produto) REFERENCES Produto(id),
     FOREIGN KEY(id_empresa) REFERENCES Empresa(id)
 );
@@ -175,7 +175,6 @@ INSERT INTO Cliente VALUES (20, 'Karlos', 'kaka@gmail.com', '958163247', '$2y$10
 INSERT INTO Cliente VALUES (21, 'Diogo', 'vulgod@gmail.com', '946132785', '$2y$10$6avBLqNQOfZD01C1HcmoGeTi6TbDoVeUdi8FkNaqn.VM9eLWrl1Ae', '8927e04d-68fc-49be-ab9a-fce710b3d2ea', true, 'cliente/21/p.jpg', 'cliente/21/m.jpg', 'cliente/21/g.jpg');
 INSERT INTO Cliente VALUES (22, 'Suse', 'susu@gmail.com', '946317825', '$2y$10$3DyUvm6XUy.JU8wDdVVgv.qkfhHUeeOrHfoSrEtHzKBcMSgUvkwb6', '32c3caea-55ae-4e09-b9a7-2912c9e4cd01', true, 'cliente/22/p.jpg', 'cliente/22/m.jpg', 'cliente/22/g.jpg');
 
-
 INSERT INTO AlteracaoSenha VALUES (1, 1, '33736ff9-fa05-4c24-8928-590cdc66dbaf', '2022-01-10 18:00:00', false);
 INSERT INTO AlteracaoSenha VALUES (2, 2, '85b03972-d85c-41af-ac26-c5090601b7c5', '2022-02-04 19:00:00', true);
 INSERT INTO AlteracaoSenha VALUES (3, 3, 'f8448d55-04fa-4033-b2ac-2f1ad9035fdb', '2022-03-11 20:00:03', true);
@@ -198,7 +197,6 @@ INSERT INTO AlteracaoSenha VALUES (19, 19, '55a3bddc-3027-4377-97a4-eee0c6fd2d09
 INSERT INTO AlteracaoSenha VALUES (20, 20, 'a6185458-5a55-40d3-bc2e-c6c3bb1afaca', '2022-04-07 03:00:04', false);
 INSERT INTO AlteracaoSenha VALUES (21, 21, '4d984782-3d05-44ee-843e-5459b1aa63e2', '2022-03-12 02:00:04', true);
 INSERT INTO AlteracaoSenha VALUES (22, 22, '886549c7-98fe-4c1b-bd21-6de91cf479fd', '2022-02-06 01:00:04', true);
-
 
 INSERT INTO Forum VALUES (1, 'Cor', 'Como selecionar apenas uma cor de determinado produto?', '2022-01-02 01:00:04');
 INSERT INTO Forum VALUES (2, 'Perfil', 'Como mudar o nome do perfil?', '2022-03-04 02:00:04');
@@ -223,7 +221,6 @@ INSERT INTO Forum VALUES (20, 'Senha', 'Perdi minha senha, como recuperar?', '20
 INSERT INTO Forum VALUES (21, 'Site', 'Quais celulares são compatíveis', '2022-11-06 20:00:04');
 INSERT INTO Forum VALUES (22, 'Site', 'vão liberar um tutorial de como mexer?', '2022-12-06 21:00:04');
 
-
 INSERT INTO ForumCliente VALUES (1, 1);
 INSERT INTO ForumCliente VALUES (2, 2);
 INSERT INTO ForumCliente VALUES (3, 3);
@@ -247,7 +244,6 @@ INSERT INTO ForumCliente VALUES (20, 20);
 INSERT INTO ForumCliente VALUES (21, 21);
 INSERT INTO ForumCliente VALUES (22, 22);
 
-
 INSERT INTO Localizacao VALUES (1, 1, '64764098');
 INSERT INTO Localizacao VALUES (2, 2, '35620913');
 INSERT INTO Localizacao VALUES (3, 3, '25309549');
@@ -267,7 +263,6 @@ INSERT INTO Localizacao VALUES (19, 19, '19273454');
 INSERT INTO Localizacao VALUES (20, 20, '98453473');
 INSERT INTO Localizacao VALUES (21, 21, '45473563');
 INSERT INTO Localizacao VALUES (22, 22, '65462546');
-
 
 INSERT INTO Historico VALUES (1, 1, 'Videogame', 'Vídeo Game Portátil Jogos Arcade Mp5');
 INSERT INTO Historico VALUES (2, 1, 'Videogame', 'Vídeo Game 8 Bits Retro Com 2 Controles 620 Jogos Clássicos');
@@ -313,7 +308,6 @@ INSERT INTO Historico VALUES (41, 21, 'Calmante', 'Rivotril');
 INSERT INTO Historico VALUES (42, 22, 'Asma', 'Alenia');
 INSERT INTO Historico VALUES (43, 22, 'Enjoo', 'Dramin');
 
-
 INSERT INTO  Produto VALUES (1, 'Ano: 2019/2020, Câmbio: Manual, KM: 21.300, Combustível: Gasolina e álcool, Carroceria: Hatchback, cor: cinza', 'FIAT UNO 1.0 FIRE FLEX ATTRACTIVE MANUAL', 'produto/1/p.jpg', 'produto/1/m.jpg', 'produto/1/g.jpg');
 INSERT INTO  Produto VALUES (2, 'Bico: Redondo, Pisada: Neutra, Material Externo: Têxtil, Material Interno: Têxtil, Fechamento: Cadarço', 'Tênis Nike Downshifter 11', 'produto/2/p.jpg', 'produto/2/m.jpg', 'produto/2/g.jpg');
 INSERT INTO  Produto VALUES (3, 'Dimensões do produto: 1 x 1 x 1 cm; 0.97 g, Fabricante: ADIDAS, ASIN: B07QFF2BQL, Número do modelo: EE7692, Departamento: Masculino', 'TENIS ADIDAS CASUAL ADVANTAGE', 'produto/3/p.jpg', 'produto/3/m.jpg', 'produto/3/g.jpg');
@@ -336,7 +330,6 @@ INSERT INTO  Produto VALUES (19, 'Cor:Preto, Dimensões:375x215x439mm, Cooler:- 
 INSERT INTO  Produto VALUES (20, 'Cor: Preto; Tamanho da Tela Polegadas: 32; Tipo de Tela: Tela led; Conversor Digital: Sim; Wi-Fi; Ethernet; Portas usb: 1; hdmi: 2; Potencia de Saída de Áudio: 5W + 5W; Tipo de Auto Falante: 2CH; Consumo de Energia: 117W; Tensão: AC100-240V 50/60Hz; Vesa: 100 x 100 mm; Frequência:60 Hz; Sistema Operacional: Tizen; Tipo de Painel: led;', 'Tv Led Samsung 32', 'produto/20/p.jpg', 'produto/20/m.jpg', 'produto/20/g.jpg');
 INSERT INTO  Produto VALUES (21, '32GB HAC-001-01 1 Controle Joy-Con - Vermelho e Azul', 'Nintendo Switch', 'produto/21/p.jpg', 'produto/21/m.jpg', 'produto/21/g.jpg');
 INSERT INTO  Produto VALUES (22, '39 x 55 x 21 cm (comprimento x Altura x Profundidade), Volume: 34L, Alça de Mão:Dupla, Peso 3.6 kg ', 'PÉGASE', 'produto/22/p.jpg', 'produto/22/m.jpg', 'produto/22/g.jpg');
-
 
 INSERT INTO  Empresa VALUES (1, 'Fiat', 'Av. Pacaembu, 1934');
 INSERT INTO  Empresa VALUES (2, 'Nike', 'Av. Mutinga, 4375');
@@ -361,30 +354,28 @@ INSERT INTO  Empresa VALUES (20, 'Shoptime', 'R. Augusta, 1894');
 INSERT INTO  Empresa VALUES (21, 'Magazineluiza', 'Ladeira Velha, 17');
 INSERT INTO  Empresa VALUES (22, 'Louis Vuitton', 'Av. Magalhães de Castro, 12000');
 
-
-INSERT INTO  Ofertas VALUES (1, 1, 1, '50.000');
-INSERT INTO  Ofertas VALUES (2, 2, 2, '198.99');
-INSERT INTO  Ofertas VALUES (3, 3, 3, '229.00');
-INSERT INTO  Ofertas VALUES (4, 4, 4, '4.609');
-INSERT INTO  Ofertas VALUES (5, 5, 5, '345.00');
-INSERT INTO  Ofertas VALUES (6, 6, 6, '239.990');
-INSERT INTO  Ofertas VALUES (7, 7, 7, '139.900');
-INSERT INTO  Ofertas VALUES (8, 8, 8, '242.52');
-INSERT INTO  Ofertas VALUES (9, 9, 9, '674.99');
-INSERT INTO  Ofertas VALUES (10, 10, 10, '5.489');
-INSERT INTO  Ofertas VALUES (11, 11, 11, '94.900');
-INSERT INTO  Ofertas VALUES (12, 12, 12, '48.900');
-INSERT INTO  Ofertas VALUES (13, 13, 13, '34.990');
-INSERT INTO  Ofertas VALUES (14, 14, 14, '2.450');
-INSERT INTO  Ofertas VALUES (15, 15, 15, '1.276');
-INSERT INTO  Ofertas VALUES (16, 16, 16, '3.549');
-INSERT INTO  Ofertas VALUES (17, 17, 17, '499.99');
-INSERT INTO  Ofertas VALUES (18, 18, 18, '179.90');
-INSERT INTO  Ofertas VALUES (19, 19, 19, '314.22');
-INSERT INTO  Ofertas VALUES (20, 20, 20, '1.635');
-INSERT INTO  Ofertas VALUES (21, 21, 21, '2.213');
-INSERT INTO  Ofertas VALUES (22, 22, 22, '17.100');
-
+INSERT INTO  Ofertas VALUES (1, 1, 1, 50000.00);
+INSERT INTO  Ofertas VALUES (2, 2, 2, 198.99);
+INSERT INTO  Ofertas VALUES (3, 3, 3, 229.00);
+INSERT INTO  Ofertas VALUES (4, 4, 4, 4609.00);
+INSERT INTO  Ofertas VALUES (5, 5, 5, 345.00);
+INSERT INTO  Ofertas VALUES (6, 6, 6, 239990.00);
+INSERT INTO  Ofertas VALUES (7, 7, 7, 139.90);
+INSERT INTO  Ofertas VALUES (8, 8, 8, 242.52);
+INSERT INTO  Ofertas VALUES (9, 9, 9, 674.99);
+INSERT INTO  Ofertas VALUES (10, 10, 10, 5489.00);
+INSERT INTO  Ofertas VALUES (11, 11, 11, 94900.00);
+INSERT INTO  Ofertas VALUES (12, 12, 12, 48900.00);
+INSERT INTO  Ofertas VALUES (13, 13, 13, 34990.00);
+INSERT INTO  Ofertas VALUES (14, 14, 14, 2450.00);
+INSERT INTO  Ofertas VALUES (15, 15, 15, 1276.00);
+INSERT INTO  Ofertas VALUES (16, 16, 16, 3549.00);
+INSERT INTO  Ofertas VALUES (17, 17, 17, 499.99);
+INSERT INTO  Ofertas VALUES (18, 18, 18, 179.90);
+INSERT INTO  Ofertas VALUES (19, 19, 19, 314.22);
+INSERT INTO  Ofertas VALUES (20, 20, 20, 1635.00);
+INSERT INTO  Ofertas VALUES (21, 21, 21, 2213.00);
+INSERT INTO  Ofertas VALUES (22, 22, 22, 17100.00);
 
 INSERT INTO OfertaFavorita VALUES (1, 1);
 INSERT INTO OfertaFavorita VALUES (2, 2);
@@ -403,7 +394,6 @@ INSERT INTO OfertaFavorita VALUES (14, 14);
 INSERT INTO OfertaFavorita VALUES (15, 15);
 INSERT INTO OfertaFavorita VALUES (16, 16);
 INSERT INTO OfertaFavorita VALUES (17, 17);
-
 
 INSERT INTO Marca VALUES (1, 1, 'Fiat');
 INSERT INTO Marca VALUES (2, 2, 'Nike');
@@ -428,30 +418,28 @@ INSERT INTO Marca VALUES (20, 20, 'Prudence');
 INSERT INTO Marca VALUES (21, 21, 'Nintendo');
 INSERT INTO Marca VALUES (22, 22, 'Renner');
 
-
 INSERT INTO SeloQualidade VALUES (1, 1, 'Este selo informa que a empresa tem produtos confiaveis', 'SeloQualidade/1/p.jpg');
-INSERT INTO SeloQualidade VALUES (2, 2, 'Este selo informa que a empresa tem produtos confiaveis', 'SeloQualidade/2/p.jpg');
-INSERT INTO SeloQualidade VALUES (3, 3, 'Este selo informa que a empresa tem produtos confiaveis', 'SeloQualidade/3/p.jpg');
-INSERT INTO SeloQualidade VALUES (4, 4, 'Este selo informa que a empresa tem produtos confiaveis', 'SeloQualidade/4/p.jpg');
-INSERT INTO SeloQualidade VALUES (5, 5, 'Este selo informa que a empresa tem produtos confiaveis', 'SeloQualidade/5/p.jpg');
-INSERT INTO SeloQualidade VALUES (6, 6, 'Este selo informa que a empresa tem produtos confiaveis', 'SeloQualidade/6/p.jpg');
-INSERT INTO SeloQualidade VALUES (7, 7, 'Este selo informa que a empresa tem produtos confiaveis', 'SeloQualidade/7/p.jpg');
-INSERT INTO SeloQualidade VALUES (8, 8, 'Este selo informa que a empresa tem produtos confiaveis', 'SeloQualidade/8/p.jpg');
-INSERT INTO SeloQualidade VALUES (9, 9, 'Este selo informa que a empresa tem produtos confiaveis', 'SeloQualidade/9/p.jpg');
-INSERT INTO SeloQualidade VALUES (10, 10, 'Este selo informa que a empresa tem produtos confiaveis', 'SeloQualidade/10/p.jpg');
-INSERT INTO SeloQualidade VALUES (11, 11, 'Este selo informa que a empresa tem produtos confiaveis', 'SeloQualidade/11/p.jpg');
-INSERT INTO SeloQualidade VALUES (12, 12, 'Este selo informa que a empresa tem produtos confiaveis', 'SeloQualidade/12/p.jpg');
-INSERT INTO SeloQualidade VALUES (13, 13, 'Este selo informa que a empresa tem produtos confiaveis', 'SeloQualidade/13/p.jpg');
-INSERT INTO SeloQualidade VALUES (14, 14, 'Este selo informa que a empresa tem produtos confiaveis', 'SeloQualidade/14/p.jpg');
-INSERT INTO SeloQualidade VALUES (15, 15, 'Este selo informa que a empresa tem produtos confiaveis', 'SeloQualidade/15/p.jpg');
-INSERT INTO SeloQualidade VALUES (16, 16, 'Este selo informa que a empresa tem produtos confiaveis', 'SeloQualidade/16/p.jpg');
-INSERT INTO SeloQualidade VALUES (17, 17, 'Este selo informa que a empresa tem produtos confiaveis', 'SeloQualidade/17/p.jpg');
-INSERT INTO SeloQualidade VALUES (18, 18, 'Este selo informa que a empresa tem produtos confiaveis', 'SeloQualidade/18/p.jpg');
-INSERT INTO SeloQualidade VALUES (19, 19, 'Este selo informa que a empresa tem produtos confiaveis', 'SeloQualidade/19/p.jpg');
-INSERT INTO SeloQualidade VALUES (20, 20, 'Este selo informa que a empresa tem produtos confiaveis', 'SeloQualidade/20/p.jpg');
-INSERT INTO SeloQualidade VALUES (21, 21, 'Este selo informa que a empresa tem produtos confiaveis', 'SeloQualidade/21/p.jpg');
-INSERT INTO SeloQualidade VALUES (22, 22, 'Este selo informa que a empresa tem produtos confiaveis', 'SeloQualidade/22/p.jpg');
-
+INSERT INTO SeloQualidade VALUES (2, 2, 'Este selo informa que a empresa tem produtos confiaveis', 'SeloQualidade/1/p.jpg');
+INSERT INTO SeloQualidade VALUES (3, 3, 'Este selo informa que a empresa tem produtos confiaveis', 'SeloQualidade/1/p.jpg');
+INSERT INTO SeloQualidade VALUES (4, 4, 'Este selo informa que a empresa tem produtos confiaveis', 'SeloQualidade/1/p.jpg');
+INSERT INTO SeloQualidade VALUES (5, 5, 'Este selo informa que a empresa tem produtos confiaveis', 'SeloQualidade/1/p.jpg');
+INSERT INTO SeloQualidade VALUES (6, 6, 'Este selo informa que a empresa tem produtos confiaveis', 'SeloQualidade/1/p.jpg');
+INSERT INTO SeloQualidade VALUES (7, 7, 'Este selo informa que a empresa tem produtos confiaveis', 'SeloQualidade/1/p.jpg');
+INSERT INTO SeloQualidade VALUES (8, 8, 'Este selo informa que a empresa tem produtos confiaveis', 'SeloQualidade/1/p.jpg');
+INSERT INTO SeloQualidade VALUES (9, 9, 'Este selo informa que a empresa tem produtos confiaveis', 'SeloQualidade/1/p.jpg');
+INSERT INTO SeloQualidade VALUES (10, 10, 'Este selo informa que a empresa tem produtos confiaveis', 'SeloQualidade/1/p.jpg');
+INSERT INTO SeloQualidade VALUES (11, 11, 'Este selo informa que a empresa tem produtos confiaveis', 'SeloQualidade/1/p.jpg');
+INSERT INTO SeloQualidade VALUES (12, 12, 'Este selo informa que a empresa tem produtos confiaveis', 'SeloQualidade/1/p.jpg');
+INSERT INTO SeloQualidade VALUES (13, 13, 'Este selo informa que a empresa tem produtos confiaveis', 'SeloQualidade/1/p.jpg');
+INSERT INTO SeloQualidade VALUES (14, 14, 'Este selo informa que a empresa tem produtos confiaveis', 'SeloQualidade/1/p.jpg');
+INSERT INTO SeloQualidade VALUES (15, 15, 'Este selo informa que a empresa tem produtos confiaveis', 'SeloQualidade/1/p.jpg');
+INSERT INTO SeloQualidade VALUES (16, 16, 'Este selo informa que a empresa tem produtos confiaveis', 'SeloQualidade/1/p.jpg');
+INSERT INTO SeloQualidade VALUES (17, 17, 'Este selo informa que a empresa tem produtos confiaveis', 'SeloQualidade/1/p.jpg');
+INSERT INTO SeloQualidade VALUES (18, 18, 'Este selo informa que a empresa tem produtos confiaveis', 'SeloQualidade/1/p.jpg');
+INSERT INTO SeloQualidade VALUES (19, 19, 'Este selo informa que a empresa tem produtos confiaveis', 'SeloQualidade/1/p.jpg');
+INSERT INTO SeloQualidade VALUES (20, 20, 'Este selo informa que a empresa tem produtos confiaveis', 'SeloQualidade/1/p.jpg');
+INSERT INTO SeloQualidade VALUES (21, 21, 'Este selo informa que a empresa tem produtos confiaveis', 'SeloQualidade/1/p.jpg');
+INSERT INTO SeloQualidade VALUES (22, 22, 'Este selo informa que a empresa tem produtos confiaveis', 'SeloQualidade/1/p.jpg');
 
 INSERT INTO Categoria VALUES (1, 1, 'Automóveis');
 INSERT INTO Categoria VALUES (2, 2, 'Celular');
@@ -495,7 +483,6 @@ INSERT INTO CategoriaCaracteristica VALUES (16, 'Gênero');
 INSERT INTO CategoriaCaracteristica VALUES (17, 'Corda');
 INSERT INTO CategoriaCaracteristica VALUES (18, 'Peso');
 
-
 INSERT INTO Apresenta VALUES (1, 1);
 INSERT INTO Apresenta VALUES (2, 2);
 INSERT INTO Apresenta VALUES (3, 3);
@@ -513,7 +500,6 @@ INSERT INTO Apresenta VALUES (14, 14);
 INSERT INTO Apresenta VALUES (15, 15);
 INSERT INTO Apresenta VALUES (16, 16);
 INSERT INTO Apresenta VALUES (17, 17);
-
 
 INSERT INTO ValorCategoriaCaracteristica VALUES (1, 1, 'Cinza');
 INSERT INTO ValorCategoriaCaracteristica VALUES (2, 1,'Preto');
@@ -592,7 +578,6 @@ INSERT INTO ValorCategoriaCaracteristica VALUES (74, 18, 'Gramas');
 INSERT INTO ValorCategoriaCaracteristica VALUES (75, 18, 'Kilogramas');
 INSERT INTO ValorCategoriaCaracteristica VALUES (76, 18, 'Miligramas');
 
-
 INSERT INTO ProdutoValorCategoriaCaracteristica VALUES (1, 1);
 INSERT INTO ProdutoValorCategoriaCaracteristica VALUES (2, 2);
 INSERT INTO ProdutoValorCategoriaCaracteristica VALUES (3, 3);
@@ -620,8 +605,7 @@ SELECT * FROM Historico;
 SELECT * FROM Categoria;
 SELECT * FROM CategoriaCaracteristica;
 SELECT * FROM ValorCategoriaCaracteristica;
+SELECT * FROM Ofertas;
 
 SELECT * FROM ValorCategoriaCaracteristica
 WHERE descricao LIKE 'c%';
-
-
