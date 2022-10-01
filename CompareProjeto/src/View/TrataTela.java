@@ -8,7 +8,7 @@ public class TrataTela {
 					"\nBem-Vindo\nCompareAqui");
 	  }
 	  public String  obtemProduto() {
-		  String nome = JOptionPane.showInputDialog("Digite o código do produto: ");
+		  String nome = JOptionPane.showInputDialog("Digite o nome do produto: ");
 		  return nome;
 	  }
 	  public void informaPreco(String mensagem) {
